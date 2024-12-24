@@ -22,6 +22,7 @@
         <a href="#education-experience" class="navButton">Education & Experience</a>
         <a href="#skills" class="navButton">Skills</a>
         <a href="#portfolio" class="navButton">Portfolio</a>
+        <a href="#activities" class="navButton">Activities</a>
         <a href="#contact" class="navButton">Contact</a>
     </div>
 
@@ -29,7 +30,21 @@
     <section id="about" class="content-section bg-light text-center">
         <div class="container px-4 px-lg-5">
             <h2>About</h2>
-            <p>Hi! I'm Amy Gonzalez, a junior Computer Science student at the University of Central Florida with passions ranging from Artificial Intelligence, UI/UX Design, Audio-Visual Engineering, and Game Design. With internships at Tesla, Siemens AG, and the Florida Space Institute, I have honed my skills in developing and automating software solutions, supporting live events, and optimizing data collection processes. My personal project experience, including game design in Unity, building a speaker from scratch, and developing a fully functional compiler in C, demonstrate my ability to tackle complex challenges and deliver innovative solutions. I am proficient in programming languages such as JavaScript, Python, Java, C, and HTML/CSS, and I thrive on applying new concepts to develop efficient and impactful technologies. I am passionate about learning and applying new concepts to develop efficient software and hardware for a better world.</p>
+            <p>
+                Hi! I’m Amy Gonzalez, a passionate Computer Science student at the 
+                University of Central Florida. I love exploring innovative solutions 
+                in software engineering, AI, AV systems, and more. With internships 
+                at Tesla, Siemens AG, and the Florida Space Institute, I’ve contributed 
+                to automating software solutions, building live AV experiences, and 
+                optimizing data collection processes. 
+            </p>
+            <p>
+                My personal projects include creating a Notion CLI Mailbox Manager, 
+                designing a React-based price-guessing game, building a compiler in C, 
+                and crafting a portable speaker from scratch. I thrive on tackling 
+                complex challenges, learning new technologies, and collaborating 
+                with diverse teams to push the boundaries of what's possible.
+            </p>
         </div>
     </section>
 
@@ -41,11 +56,18 @@
                 <div class="education-card" onclick="showDescription('ucf')">
                     <img src="assets/img/ucf.jpeg" alt="University of Central Florida">
                     <h3>University of Central Florida</h3>
-                    <p>Bachelor's of Computer Science</p>
-                    <p>2021-2025</p>
+                    <p>Honors Bachelor of Computer Science</p>
+                    <p>Orlando, Florida | GPA: 3.5</p>
+                    <p>Expected Graduation: December 2025</p>
                 </div>
                 <div id="ucf" class="description">
-                    <p>Honors Bachelor of Computer Science</p>
+                    <p>
+                        <strong>Relevant Coursework:</strong><br>
+                        Computer Science I &amp; II, Discrete Structures, Object-Oriented Programming, 
+                        Security in Computing, Artificial Intelligence, Computer Logic and Organization, 
+                        Algorithms for Machine Learning, Systems Software, Programming Languages, 
+                        Calculus III, Physics II
+                    </p>
                 </div>
 
                 <div class="education-card" onclick="showDescription('whs')">
@@ -63,18 +85,37 @@
     <section id="experience" class="content-section bg-light text-center">
         <div class="container px-4 px-lg-5">
             <h2>Experience</h2>
+            <!-- Tesla -->
             <div class="experience-card" onclick="showDescription('tesla')">
                 <img src="assets/img/tesla.svg" alt="Tesla">
                 <h3>Tesla</h3>
-                <p>Global AV/ Software Engineering Intern</p>
+                <p>Global AV Software Engineering Intern</p>
                 <p>Palo Alto, CA | May 2024 - August 2024</p>
             </div>
             <div id="tesla" class="description">
-                <p>Utilized programming, networking, and live event experience to support Tesla’s Global AV Engineering team.</p>
-                <p>Created Python scripts to automate tasks in SharePoint, analyze data, and streamline requests for teams room repairs across all Tesla sites in North America.</p>
-                <p>Assisted to plan and execute the 2024 Tesla Annual Shareholder’s Event in Austin, TX, handling logistical details, live audio, and camera operations.</p>
+                <ul>
+                    <li>
+                        Developed Python scripts (using <code>requests</code> and <code>pandas</code>) 
+                        to automate data entry and retrieval, enhancing efficiency in data organization.
+                    </li>
+                    <li>
+                        Created an internal website (HTML/CSS/JavaScript) to streamline repair 
+                        request processes across Tesla’s North American sites, reducing 
+                        response times significantly.
+                    </li>
+                    <li>
+                        Coordinated live AV systems for Tesla’s Annual Shareholder’s Event, 
+                        ensuring seamless experiences for over 600 in-person attendees and 
+                        millions of online viewers.
+                    </li>
+                    <li>
+                        Contributed to Tesla’s brand by implementing technical solutions that 
+                        optimized communication and minimized downtime.
+                    </li>
+                </ul>
             </div>
 
+            <!-- Siemens AG -->
             <div class="experience-card" onclick="showDescription('siemens')">
                 <img src="assets/img/siemens.jpg" alt="Siemens AG">
                 <h3>Siemens AG</h3>
@@ -82,22 +123,52 @@
                 <p>Orlando, FL | February 2023 - April 2024</p>
             </div>
             <div id="siemens" class="description">
-                <p>Developed and implemented custom Python and SQL scripts within Alteryx to execute complex data transformations.</p>
-                <p>Supported US Customs Team by designing and deploying workflows and solutions in Alteryx, Mendix, and various programming languages.</p>
-                <p>Created Alteryx workflows to clean, manipulate, and resolve data issues, enhancing data clarity and usability for internal company use.</p>
-                <p>Constructed Power Automate workflows to automate repetitive tasks, streamlining the addition of files to the Customs Document Management System.</p>
+                <ul>
+                    <li>
+                        Built a Full Stack Dashboard with React and Kotlin for trade compliance 
+                        data visualization, cutting query time by 50%.
+                    </li>
+                    <li>
+                        Automated data transformations with custom Python and SQL scripts in Alteryx, 
+                        reducing processing time by 60% and boosting decision-making accuracy.
+                    </li>
+                    <li>
+                        Developed applications with Mendix and React to digitize document management, 
+                        achieving a 50% increase in team efficiency.
+                    </li>
+                    <li>
+                        Leveraged Power Automate to optimize workflows like file uploads and data 
+                        synchronization, enhancing operational performance.
+                    </li>
+                </ul>
             </div>
 
+            <!-- Florida Space Institute -->
             <div class="experience-card" onclick="showDescription('fsi')">
                 <img src="assets/img/fsi.png" alt="Florida Space Institute">
                 <h3>Florida Space Institute</h3>
                 <p>Software Engineering Intern</p>
-                <p>Orlando, FL | January 2023 - March 2023</p>
+                <p>Orlando, FL | January 2023 - April 2023</p>
             </div>
             <div id="fsi" class="description">
-                <p>Worked closely with engineering research teams to develop software beneficial to the development of space equipment at a UCF space research site.</p>
-                <p>Used Arduino to give instructions to lab equipment, instructed a vacuum pressure monitor to relay the current pressure in Ohms.</p>
-                <p>Created algorithms to optimize data collection and processing for various lab equipment, enhancing the accuracy and efficiency of experiments in the lab.</p>
+                <ul>
+                    <li>
+                        Designed Arduino code to interface with vacuum pressure sensors, 
+                        enabling real-time monitoring for experimental chambers.
+                    </li>
+                    <li>
+                        Integrated software with lab equipment using serial communication 
+                        protocols and libraries (Matplotlib, PyQt) for live data visualization.
+                    </li>
+                    <li>
+                        Collaborated with multidisciplinary teams to develop custom software 
+                        solutions for space research, improving experimental accuracy.
+                    </li>
+                    <li>
+                        Implemented analog-to-digital conversion algorithms for precise 
+                        measurement of pressure levels, aiding critical space research.
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -106,11 +177,24 @@
     <section id="skills" class="content-section bg-primary text-white text-center">
         <div class="container px-4 px-lg-5">
             <h2>Skills</h2>
+            <!-- Programming Languages -->
             <h3>Programming Languages</h3>
             <div class="skills-container">
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/javascript-icon.png" alt="Javascript"></div>
-                    <h4>Javascript</h4>
+                    <div class="card-icon"><img src="assets/img/java-icon.png" alt="Java"></div>
+                    <h4>Java</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/c-icon.png" alt="C"></div>
+                    <h4>C</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/cpp-icon.png" alt="C++"></div>
+                    <h4>C++</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/python-icon.jpeg" alt="Python"></div>
+                    <h4>Python</h4>
                 </div>
                 <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/css-icon.png" alt="CSS"></div>
@@ -121,77 +205,81 @@
                     <h4>HTML</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/java-icon.png" alt="Java"></div>
-                    <h4>Java</h4>
+                    <div class="card-icon"><img src="assets/img/javascript-icon.png" alt="Javascript"></div>
+                    <h4>JavaScript</h4>
+                </div>
+                <!-- Add icons for new languages if you have them, otherwise text-only. -->
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/typescript-icon.png" alt="TypeScript"></div>
+                    <h4>TypeScript</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/c-icon.png" alt="C"></div>
-                    <h4>C</h4>
+                    <div class="card-icon"><img src="assets/img/kotlin-icon.png" alt="Kotlin"></div>
+                    <h4>Kotlin</h4>
+                </div>
+                <!-- If you don't have Rust/Haskell/R icons, you can leave these as text or create placeholders -->
+                <div class="skill-card">
+                    <h4>Rust</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/python-icon.jpeg" alt="Python"></div>
-                    <h4>Python</h4>
+                    <h4>Haskell</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/cpp-icon.png" alt="C++"></div>
-                    <h4>C++</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/arduino-icon.png" alt="Arduino"></div>
-                    <h4>Arduino</h4>
+                    <h4>R</h4>
                 </div>
             </div>
-            <h3>Proficiencies</h3>
+
+            <!-- Technologies -->
+            <h3>Technologies</h3>
             <div class="skills-container">
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/macos-icon.png" alt="MacOS"></div>
-                    <h4>MacOS</h4>
+                    <h4>React</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/windows-icon.png" alt="Windows"></div>
-                    <h4>Windows</h4>
+                    <h4>Django</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/linux-icon.png" alt="Linux"></div>
-                    <h4>Linux</h4>
+                    <h4>Node.js</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/android-icon.png" alt="Android"></div>
-                    <h4>Android</h4>
+                    <h4>Flask</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/ios-icon.png" alt="iOS"></div>
-                    <h4>iOS</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/office-icon.png" alt="Office Suite"></div>
-                    <h4>Office Suite</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/slack-icon.png" alt="Slack"></div>
-                    <h4>Slack</h4>
+                    <h4>Angular</h4>
                 </div>
                 <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/unity-icon.png" alt="Unity"></div>
                     <h4>Unity</h4>
                 </div>
                 <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/linux-icon.png" alt="Linux"></div>
+                    <h4>Linux</h4>
+                </div>
+                <div class="skill-card">
+                    <h4>Git</h4>
+                </div>
+                <div class="skill-card">
+                    <h4>MongoDB</h4>
+                </div>
+                <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/alteryx-icon.png" alt="Alteryx"></div>
                     <h4>Alteryx</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/pixelmator-icon.png" alt="Pixelmator Pro"></div>
-                    <h4>Pixelmator Pro</h4>
+                    <h4>NumPy</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/finalcut-icon.png" alt="Final Cut Pro"></div>
-                    <h4>Final Cut Pro</h4>
+                    <h4>Matplotlib</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/logicpro-icon.png" alt="Logic Pro"></div>
-                    <h4>Logic Pro</h4>
+                    <h4>PowerBI</h4>
+                </div>
+                <div class="skill-card">
+                    <h4>Tableau</h4>
                 </div>
             </div>
+
+            <!-- Spoken Languages -->
             <h3>Spoken Languages</h3>
             <div class="skills-container">
                 <div class="skill-card">
@@ -210,37 +298,74 @@
     <section id="portfolio" class="content-section text-center">
         <div class="container px-4 px-lg-5">
             <h2>Portfolio</h2>
-            <div class="portfolio-card" onclick="showDescription('astral-explorer')">
-                <img src="assets/img/astral-explorer.png" alt="Astral Explorer">
-                <h3>Astral Explorer</h3>
-                <p>Unity Game Development Project</p>
+            <!-- Notion CLI Mailbox Manager -->
+            <div class="portfolio-card" onclick="showDescription('notion-cli')">
+                <img src="assets/img/notion-cli.png" alt="Notion CLI Mailbox Manager">
+                <h3>Notion CLI Mailbox Manager</h3>
+                <p>December 2024 | JavaScript, Node.js, Notion API</p>
             </div>
-            <div id="astral-explorer" class="description">
-                <p>Created a rogue-like 2D platformer game where the main character travels to different planets to defeat enemies and bosses.</p>
-                <p>Built upon knowledge of Python for scripting and implemented complex AI algorithms for enemies and bosses.</p>
-                <p>Designed game stages, enemy combat system, spellcasting system, and engineered game audio with Logic Pro.</p>
+            <div id="notion-cli" class="description">
+                <p>Developed a Node.js CLI tool to interact with a Notion database, enabling mailbox-like message handling with secure API integration.</p>
+                <p>Streamlined message retrieval and sorting with formula-based properties and filters, reducing manual workload.</p>
+                <p>Ensured robust user experience through error handling, input validation, and continuous navigation features.</p>
             </div>
-    
-            <div class="portfolio-card" onclick="showDescription('ieee-speaker')">
-                <img src="assets/img/ieee-speaker.jpeg" alt="IEEE Speaker Build Project">
-                <h3>IEEE Speaker Build Project</h3>
+
+            <!-- The Price is An Oversight -->
+            <div class="portfolio-card" onclick="showDescription('price-oversight')">
+                <img src="assets/img/price-oversight.png" alt="The Price is An Oversight">
+                <h3>The Price is An Oversight</h3>
+                <p>October 2024 | React, TypeScript, Node.js, eBay API</p>
             </div>
-            <div id="ieee-speaker" class="description">
-                <p>Collaborated with a team in the IEEE chapter to design and construct a speaker from scratch, focusing on circuit design and component assembly.</p>
-                <p>Gained hands-on experience in soldering, testing, and troubleshooting electronic circuits, enhancing practical electrical engineering skills.</p>
-                <p>Developed a deeper understanding of acoustics and electrical engineering concepts through the application of theoretical knowledge in a real-world project.</p>
+            <div id="price-oversight" class="description">
+                <p>Built a web application that challenges users to guess real-time prices of eBay items, enhancing engagement through interactive design.</p>
+                <p>Integrated cookies to save user preferences, scores, and progress, fostering personalized experiences.</p>
+                <p>Enriched gameplay with OpenAI’s ChatGPT API for dynamic, contextual hints.</p>
             </div>
-    
+
+            <!-- Compiler Project -->
             <div class="portfolio-card" onclick="showDescription('compiler-project')">
                 <img src="assets/img/compiler-project.jpeg" alt="Compiler Project">
                 <h3>Compiler Project</h3>
-                <p>Systems Software</p>
+                <p>September 2024 | Systems Software (C, PL/0)</p>
             </div>
             <div id="compiler-project" class="description">
-                <p>Constructed a fully functioning C compiler from scratch in a team of two. Built a Gantt chart to appropriately delegate work and plan deadlines.</p>
-                <p>Four components of the compiler were built: the Lexer, Parser, Virtual Machine, and the Code Generator.</p>
-                <p>The compiler was written in C and was made for a unique language, PL/0, that is native to UCF and was specifically created to teach this concept.</p>
+                <p>Constructed a fully functioning compiler for the PL/0 programming language using C.</p>
+                <p>Developed the Lexer to tokenize input code, handling identifiers, keywords, numbers, and symbols.</p>
+                <p>Created a Code Generator that translates abstract syntax trees into intermediate code and executes on a custom-built Virtual Machine.</p>
+                <p>Built the Virtual Machine to handle arithmetic, control flow, and procedure calls.</p>
             </div>
+
+            <!-- IEEE Speaker Build Project -->
+            <div class="portfolio-card" onclick="showDescription('ieee-speaker')">
+                <img src="assets/img/ieee-speaker.jpeg" alt="IEEE Speaker Build Project">
+                <h3>IEEE Speaker Build Project</h3>
+                <p>May 2024</p>
+            </div>
+            <div id="ieee-speaker" class="description">
+                <p>Collaborated with a team of three IEEE members to design and construct a portable speaker from scratch, focusing on both electrical and mechanical aspects.</p>
+                <p>Designed the circuit schematic and PCB layout using CAD, selecting components such as amplifiers, resistors, capacitors, and inductors.</p>
+                <p>Assembled and soldered electronic components, ensuring proper connections and functionality.</p>
+                <p>Gained hands-on experience in acoustics and circuit design, deepening practical electrical engineering skills through real-world application.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities & Accomplishments Section -->
+    <section id="activities" class="content-section bg-light text-center">
+        <div class="container px-4 px-lg-5">
+            <h2>Activities &amp; Accomplishments</h2>
+            <ul class="activities-list">
+                <li>Theta Tau Professional Engineering Fraternity - Academic Chair (2024 - Present)</li>
+                <li>Society of Hispanic Professional Engineers (2021 - Present)</li>
+                <li>IEEE UCF Chapter Member (2021 - Present)</li>
+                <li>UCF Knights of the Turntables Student DJ (2023 - Present)</li>
+                <li>Society of Women Engineers - Engineering Chair (2021 - Present)</li>
+                <li>Google Student Developer Club (2022 - Present)</li>
+                <li>University of Central Florida Dean’s List (2021 - 2023)</li>
+                <li>Phi Eta Sigma National Honor Society - 4.0 Freshman GPA (2021 - 2022)</li>
+                <li>Wiesbaden High School Women’s Golf - Most Valuable Player (2020 - 2021)</li>
+                <li>Vice President of Senior Class - Wiesbaden High School (2019 - 2020)</li>
+            </ul>
         </div>
     </section>
 
@@ -248,14 +373,24 @@
     <section id="contact" class="content-section text-center">
         <div class="container px-4 px-lg-5">
             <h2>Contact Me!</h2>
-            
+            <p class="lead mb-5">You can reach me at:</p>
+            <p class="lead mb-5">Phone: <a href="tel:+18635213869">863-521-3869</a></p>
+            <p class="lead mb-5">Email: <a href="mailto:amymariag217@gmail.com">amymariag217@gmail.com</a></p>
+            <p class="lead mb-5">
+                LinkedIn: 
+                <a href="https://www.linkedin.com/in/amymariegonzalez" target="_blank">
+                    linkedin.com/in/amymariegonzalez
+                </a>
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container px-4 px-lg-5">
-            <p class="text-muted small mb-0">Copyright &copy; Amy Marie Gonzalez 2024</p>
+            <p class="text-muted small mb-0">
+                &copy; 2024 Amy Marie Gonzalez
+            </p>
         </div>
     </footer>
 </body>
