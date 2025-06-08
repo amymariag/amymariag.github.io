@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script defer src="js/scripts.js"></script>
-    <title>Amy Gonzalez</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Gonzalez - Portfolio</title>
+    <link rel="stylesheet" href="globals.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .section {
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-button {
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            background-color: #9c27b0;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #7b1fa2;
+        }
         .card-icon img,
         .education-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .skill-card {
+            width: 100px;
+            text-align: center;
+        }
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+        }
     </style>
 </head>
-<body id="page-top">
-    
-    <!-- Header with Name -->
-    <header class="masthead d-flex align-items-center">
+<body class="bg-[#d7a3ff]">
+    <nav class="fixed top-0 left-0 right-0 bg-[#d7a3ff] p-4 shadow-md z-50">
+        <div class="flex justify-center space-x-4">
+            <button class="nav-button" onclick="scrollToSection('about')">About Me</button>
+            <button class="nav-button" onclick="scrollToSection('education')">Education & Experience</button>
+            <button class="nav-button" onclick="scrollToSection('skills')">Skills</button>
+            <button class="nav-button" onclick="scrollToSection('portfolio')">Project Portfolio</button>
+            <button class="nav-button" onclick="scrollToSection('activities')">Activities</button>
+            <button class="nav-button" onclick="scrollToSection('contact')">Contact me!</button>
+        </div>
+    </nav>
+
+    <header class="masthead d-flex align-items-center pt-20">
         <div class="container text-center">
-            <h1 class="mb-1" id="name">Amy Marie Gonzalez</h1>
-            <hr />
+            <h1 class="mb-1 text-5xl font-bold" id="name">Amy Marie Gonzalez</h1>
+            <hr class="my-4" />
         </div>
     </header>
 
-    <!-- Navigation Buttons -->
-    <div id="navButtons">
-        <a href="#about" class="navButton">About</a>
-        <a href="#education-experience" class="navButton">Education & Experience</a>
-        <a href="#skills" class="navButton">Skills</a>
-        <a href="#portfolio" class="navButton">Portfolio</a>
-        <a href="#activities" class="navButton">Activities</a>
-        <a href="#contact" class="navButton">Contact</a>
-    </div>
-
-    <!-- About Section -->
-    <section id="about" class="content-section bg-light text-center">
-        <div class="container px-4 px-lg-5">
-            <h2>About</h2>
-            <p>
-                Hi! I’m Amy Gonzalez, a passionate Computer Science student at the 
-                University of Central Florida. I love exploring innovative solutions 
-                in software engineering, AI, AV systems, and more. With internships 
-                at Tesla, Siemens AG, and the Florida Space Institute, I’ve contributed 
+    <section id="about" class="section">
+        <h2 class="text-4xl mb-4">About Me</h2>
+        <div class="max-w-2xl text-center">
+            <p class="mb-4">
+                Hi! I'm Amy Gonzalez, a passionate Computer Science student at the 
+                University of Central Florida. I am passionate about Software Engineering because it allows myself to create without boundaries. With internships 
+                at Tesla, Siemens AG, and the Florida Space Institute, I've contributed 
                 to automating software solutions, building live AV experiences, and 
                 optimizing data collection processes. 
             </p>
@@ -57,137 +93,67 @@
         </div>
     </section>
 
-    <!-- Education & Experience Section -->
-    <section id="education-experience" class="content-section bg-light text-center">
-        <div class="container px-4 px-lg-5">
-            <h2>Education</h2>
-            <div class="education-container">
-                <div class="education-card" onclick="showDescription('ucf')">
-                    <img src="assets/img/ucf.jpeg" alt="University of Central Florida">
-                    <h3>University of Central Florida</h3>
-                    <p>Honors Bachelor of Computer Science</p>
-                    <p>Orlando, Florida | GPA: 3.5</p>
-                    <p>Expected Graduation: December 2025</p>
+    <section id="education" class="section">
+        <h2 class="text-4xl mb-4">Education & Experience</h2>
+        <div class="max-w-4xl">
+            <h3 class="text-2xl mb-4">Education</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h4 class="text-xl font-bold">University of Central Florida</h4>
+                    <p>Honors Bachelor of Science in Computer Science</p>
+                    <p>Orlando, Florida</p>
+                    <p>August 2021 – December 2025</p>
+                    <p class="mt-2"><strong>Relevant Coursework:</strong> Data Structures, Object-Oriented Design, Database Systems, Artificial Intelligence, Algorithms for Machine Learning, Discrete Structures, Operating Systems</p>
                 </div>
-                <div id="ucf" class="description">
-                    <p>
-                        <strong>Relevant Coursework:</strong><br>
-                        Computer Science I &amp; II, Discrete Structures, Object-Oriented Programming, 
-                        Security in Computing, Artificial Intelligence, Computer Logic and Organization, 
-                        Algorithms for Machine Learning, Systems Software, Programming Languages, 
-                        Calculus III, Physics II
-                    </p>
-                </div>
-
-                <div class="education-card" onclick="showDescription('whs')">
-                    <img src="assets/img/whs.jpeg" alt="Wiesbaden High School">
-                    <h3>Wiesbaden High School</h3>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h4 class="text-xl font-bold">Wiesbaden High School</h4>
                     <p>Hesse, Germany</p>
                 </div>
-                <div id="whs" class="description">
-                    <p>Graduated from Wiesbaden High School in Hesse, Germany.</p>
+            </div>
+
+            <h3 class="text-2xl mt-8 mb-4">Experience</h3>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h4 class="text-xl font-bold">Tesla</h4>
+                    <p>Software Engineer Intern</p>
+                    <p>Palo Alto, CA | May 2025 – Present, May 2024 – August 2024</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Engineered a secure full-stack web application using Angular.js and Spring Boot, implementing user authentication with JWT, email verification via Gmail SMTP, and dynamic reporting features</li>
+                        <li>Integrated a proprietary AI API and MySQL backend to generate data-driven insights with Excel export and real-time charting</li>
+                        <li>Improved internal applications by resolving bugs, optimizing SQL queries, and troubleshooting backend data issues</li>
+                        <li>Created and maintained technical documentation (user guides, runbooks, API specifications) to streamline onboarding</li>
+                        <li>Assisted with AV event setup and troubleshooting for Tesla's 2024 Annual Shareholder Meeting and other corporate events</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h4 class="text-xl font-bold">Siemens</h4>
+                    <p>Software Engineer Intern</p>
+                    <p>Orlando, FL | February 2023 - April 2024</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Automated compliance data workflows using Python, JavaScript, and Power Automate, reducing manual data entry efforts</li>
+                        <li>Developed custom scripts for data aggregation and validation, cutting processing time for thousands of monthly trade transactions</li>
+                        <li>Led cross-functional discussions with 50+ stakeholders across compliance, IT, security, and customs teams</li>
+                        <li>Digitized legacy processes by developing Mendix applications and extending functionality with custom React components, improving operational efficiency by 60 percent</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h4 class="text-xl font-bold">Florida Space Institute</h4>
+                    <p>Software Engineer Intern</p>
+                    <p>Orlando, FL | January 2023 - March 2023</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Designed and implemented software solutions for space research equipment, collaborating with mechanical and electrical engineers</li>
+                        <li>Programmed Arduino boards to interface with vacuum pressure sensors, implementing real-time data logging via CSV storage</li>
+                        <li>Developed interactive data visualization tools using Matplotlib and PyQt, reducing manual analysis time by 35 percent</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="content-section bg-light text-center">
-        <div class="container px-4 px-lg-5">
-            <h2>Experience</h2>
-            <!-- Tesla -->
-            <div class="experience-card" onclick="showDescription('tesla')">
-                <img src="assets/img/tesla.svg" alt="Tesla">
-                <h3>Tesla</h3>
-                <p>Global AV Software Engineering Intern</p>
-                <p>Palo Alto, CA | May 2024 - August 2024</p>
-            </div>
-            <div id="tesla" class="description">
-                <ul>
-                    <li>
-                        Developed Python scripts (using <code>requests</code> and <code>pandas</code>) 
-                        to automate data entry and retrieval, enhancing efficiency in data organization.
-                    </li>
-                    <li>
-                        Created an internal website (HTML/CSS/JavaScript) to streamline repair 
-                        request processes across Tesla’s North American sites, reducing 
-                        response times significantly.
-                    </li>
-                    <li>
-                        Coordinated live AV systems for Tesla’s Annual Shareholder’s Event, 
-                        ensuring seamless experiences for over 600 in-person attendees and 
-                        millions of online viewers.
-                    </li>
-                    <li>
-                        Contributed to Tesla’s brand by implementing technical solutions that 
-                        optimized communication and minimized downtime.
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Siemens AG -->
-            <div class="experience-card" onclick="showDescription('siemens')">
-                <img src="assets/img/siemens.jpg" alt="Siemens AG">
-                <h3>Siemens AG</h3>
-                <p>Technical Software Intern</p>
-                <p>Orlando, FL | February 2023 - April 2024</p>
-            </div>
-            <div id="siemens" class="description">
-                <ul>
-                    <li>
-                        Built a Full Stack Dashboard with React and Kotlin for trade compliance 
-                        data visualization, cutting query time by 50%.
-                    </li>
-                    <li>
-                        Automated data transformations with custom Python and SQL scripts in Alteryx, 
-                        reducing processing time by 60% and boosting decision-making accuracy.
-                    </li>
-                    <li>
-                        Developed applications with Mendix and React to digitize document management, 
-                        achieving a 50% increase in team efficiency.
-                    </li>
-                    <li>
-                        Leveraged Power Automate to optimize workflows like file uploads and data 
-                        synchronization, enhancing operational performance.
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Florida Space Institute -->
-            <div class="experience-card" onclick="showDescription('fsi')">
-                <img src="assets/img/fsi.png" alt="Florida Space Institute">
-                <h3>Florida Space Institute</h3>
-                <p>Software Engineering Intern</p>
-                <p>Orlando, FL | January 2023 - April 2023</p>
-            </div>
-            <div id="fsi" class="description">
-                <ul>
-                    <li>
-                        Designed Arduino code to interface with vacuum pressure sensors, 
-                        enabling real-time monitoring for experimental chambers.
-                    </li>
-                    <li>
-                        Integrated software with lab equipment using serial communication 
-                        protocols and libraries (Matplotlib, PyQt) for live data visualization.
-                    </li>
-                    <li>
-                        Collaborated with multidisciplinary teams to develop custom software 
-                        solutions for space research, improving experimental accuracy.
-                    </li>
-                    <li>
-                        Implemented analog-to-digital conversion algorithms for precise 
-                        measurement of pressure levels, aiding critical space research.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="content-section bg-primary text-white text-center">
-        <div class="container px-4 px-lg-5">
-            <h2>Skills</h2>
-            <!-- Programming Languages -->
-            <h3>Programming Languages</h3>
+    <section id="skills" class="section">
+        <h2 class="text-4xl mb-4">Skills</h2>
+        <div class="max-w-4xl">
+            <h3 class="text-2xl mb-4">Programming Languages</h3>
             <div class="skills-container">
                 <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/java-icon.png" alt="Java"></div>
@@ -206,107 +172,100 @@
                     <h4>Python</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/css-icon.png" alt="CSS"></div>
-                    <h4>CSS</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/html-icon.png" alt="HTML"></div>
-                    <h4>HTML</h4>
-                </div>
-                <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/javascript-icon.png" alt="JavaScript"></div>
                     <h4>JavaScript</h4>
                 </div>
-                <!-- Added missing images -->
                 <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/typescript-icon.png" alt="TypeScript"></div>
                     <h4>TypeScript</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/kotlin-icon.png" alt="Kotlin"></div>
-                    <h4>Kotlin</h4>
+                    <div class="card-icon"><img src="assets/img/swift-icon.png" alt="Swift"></div>
+                    <h4>Swift</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/rust-icon.png" alt="Rust"></div>
-                    <h4>Rust</h4>
+                    <div class="card-icon"><img src="assets/img/sql-icon.png" alt="SQL"></div>
+                    <h4>SQL</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/haskell-icon.png" alt="Haskell"></div>
-                    <h4>Haskell</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/r-icon.png" alt="R"></div>
-                    <h4>R</h4>
+                    <div class="card-icon"><img src="assets/img/go-icon.png" alt="Go"></div>
+                    <h4>Go</h4>
                 </div>
             </div>
 
-            <!-- Technologies -->
-            <h3>Technologies</h3>
+            <h3 class="text-2xl mt-8 mb-4">Tools and Platforms</h3>
             <div class="skills-container">
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/react-icon.png" alt="React"></div>
-                    <h4>React</h4>
+                    <div class="card-icon"><img src="assets/img/vscode-icon.png" alt="VS Code"></div>
+                    <h4>VS Code</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/django-icon.png" alt="Django"></div>
-                    <h4>Django</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/nodejs-icon.png" alt="Node.js"></div>
-                    <h4>Node.js</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/flask-icon.png" alt="Flask"></div>
-                    <h4>Flask</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/angular-icon.png" alt="Angular"></div>
-                    <h4>Angular</h4>
+                    <div class="card-icon"><img src="assets/img/xcode-icon.png" alt="Xcode"></div>
+                    <h4>Xcode</h4>
                 </div>
                 <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/unity-icon.png" alt="Unity"></div>
                     <h4>Unity</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/linux-icon.png" alt="Linux"></div>
-                    <h4>Linux</h4>
+                    <div class="card-icon"><img src="assets/img/figma-icon.png" alt="Figma"></div>
+                    <h4>Figma</h4>
                 </div>
                 <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/git-icon.png" alt="Git"></div>
                     <h4>Git</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/mongodb-icon.png" alt="MongoDB"></div>
-                    <h4>MongoDB</h4>
+                    <div class="card-icon"><img src="assets/img/linux-icon.png" alt="Linux"></div>
+                    <h4>Linux</h4>
                 </div>
                 <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/alteryx-icon.png" alt="Alteryx"></div>
-                    <h4>Alteryx</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/numpy-icon.png" alt="NumPy"></div>
-                    <h4>NumPy</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/matplotlib-icon.png" alt="Matplotlib"></div>
-                    <h4>Matplotlib</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/powerbi-icon.png" alt="PowerBI"></div>
-                    <h4>PowerBI</h4>
-                </div>
-                <div class="skill-card">
-                    <div class="card-icon"><img src="assets/img/tableau-icon.png" alt="Tableau"></div>
-                    <h4>Tableau</h4>
+                    <div class="card-icon"><img src="assets/img/unix-icon.png" alt="Unix"></div>
+                    <h4>Unix</h4>
                 </div>
             </div>
 
-            <!-- Spoken Languages -->
-            <h3>Spoken Languages</h3>
+            <h3 class="text-2xl mt-8 mb-4">Technologies and Frameworks</h3>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/nodejs-icon.png" alt="Node.js"></div>
+                    <h4>Node.js</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/react-icon.png" alt="React"></div>
+                    <h4>React</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/spring-icon.png" alt="Spring Boot"></div>
+                    <h4>Spring Boot</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/websocket-icon.png" alt="WebSocket"></div>
+                    <h4>WebSocket</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/docker-icon.png" alt="Docker"></div>
+                    <h4>Docker</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/kubernetes-icon.png" alt="Kubernetes"></div>
+                    <h4>Kubernetes</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/aws-icon.png" alt="AWS"></div>
+                    <h4>AWS</h4>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><img src="assets/img/azure-icon.png" alt="Azure"></div>
+                    <h4>Azure</h4>
+                </div>
+            </div>
+
+            <h3 class="text-2xl mt-8 mb-4">Spoken Languages</h3>
             <div class="skills-container">
                 <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/spanish-icon.png" alt="Spanish"></div>
-                    <h4>Spanish (Native)</h4>
+                    <h4>Spanish (Bilingual)</h4>
                 </div>
                 <div class="skill-card">
                     <div class="card-icon"><img src="assets/img/german-icon.png" alt="German"></div>
@@ -316,104 +275,85 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="content-section text-center">
-        <div class="container px-4 px-lg-5">
-            <h2>Portfolio</h2>
-            <!-- Notion CLI Mailbox Manager -->
-            <div class="portfolio-card" onclick="showDescription('notion-cli')">
-                <img src="assets/img/notion-cli.png" alt="Notion CLI Mailbox Manager">
-                <h3>Notion CLI Mailbox Manager</h3>
-                <p>December 2024 | JavaScript, Node.js, Notion API</p>
+    <section id="portfolio" class="section">
+        <h2 class="text-4xl mb-4">Project Portfolio</h2>
+        <div class="max-w-4xl space-y-8">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-2xl font-bold">SwiftPoker – Object-Oriented Poker Project</h3>
+                <p class="text-sm text-gray-600">May 2025 | Swift, WebSocket, Figma, Git</p>
+                <p class="mt-2">Implemented real-time, shared-state multiplayer functionality in Swift by leveraging WebSocket protocols to handle bidirectional communication and ensure synchronized game state across concurrent player sessions. Integrated robust game logic for betting, state management, and round transitions, ensuring a fluid user experience. Managed a team of four, delegated tasks using Agile methodologies, designed user flows in Figma, and used Git for streamlined version control.</p>
             </div>
-            <div id="notion-cli" class="description">
-                <p>Developed a Node.js CLI tool to interact with a Notion database, enabling mailbox-like message handling with secure API integration.</p>
-                <p>Streamlined message retrieval and sorting with formula-based properties and filters, reducing manual workload.</p>
-                <p>Ensured robust user experience through error handling, input validation, and continuous navigation features.</p>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-2xl font-bold">DesignFlow – Mobile Rendering Companion</h3>
+                <p class="text-sm text-gray-600">April 2025 | Swift, JavaScriptCore, WebSocket</p>
+                <p class="mt-2">Developed a full-featured iOS prototype in Swift that streams and renders complex design files live with desktop-grade visual fidelity, inspired by Figma. Built a Swift-based parser and synchronization engine using URLSession WebSockets for sub-100 ms live updates, and embedded JavaScriptCore for dynamic on-device layout scripting. Engineered a high-performance rendering pipeline with CoreGraphics and GCD, with optional Metal shaders to achieve smooth 60 FPS vector drawing.</p>
             </div>
-
-            <!-- The Price is An Oversight -->
-            <div class="portfolio-card" onclick="showDescription('price-oversight')">
-                <img src="assets/img/price-oversight.png" alt="The Price is An Oversight">
-                <h3>The Price is An Oversight</h3>
-                <p>October 2024 | React, TypeScript, Node.js, eBay API</p>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-2xl font-bold">Notion CLI Mailbox Manager</h3>
+                <p class="text-sm text-gray-600">December 2024 | JavaScript, Node.js, Notion API</p>
+                <p class="mt-2">Developed a Node.js CLI tool to interact with a Notion database, enabling mailbox-like message handling with secure API integration. Streamlined message retrieval and sorting with formula-based properties and filters, reducing manual workload. Ensured robust user experience through error handling, input validation, and continuous navigation features.</p>
             </div>
-            <div id="price-oversight" class="description">
-                <p>Built a web application that challenges users to guess real-time prices of eBay items, enhancing engagement through interactive design.</p>
-                <p>Integrated cookies to save user preferences, scores, and progress, fostering personalized experiences.</p>
-                <p>Enriched gameplay with OpenAI’s ChatGPT API for dynamic, contextual hints.</p>
-            </div>
-
-            <!-- Compiler Project -->
-            <div class="portfolio-card" onclick="showDescription('compiler-project')">
-                <img src="assets/img/compiler-project.jpeg" alt="Compiler Project">
-                <h3>Compiler Project</h3>
-                <p>September 2024 | Systems Software (C, PL/0)</p>
-            </div>
-            <div id="compiler-project" class="description">
-                <p>Constructed a fully functioning compiler for the PL/0 programming language using C.</p>
-                <p>Developed the Lexer to tokenize input code, handling identifiers, keywords, numbers, and symbols.</p>
-                <p>Created a Code Generator that translates abstract syntax trees into intermediate code and executes on a custom-built Virtual Machine.</p>
-                <p>Built the Virtual Machine to handle arithmetic, control flow, and procedure calls.</p>
-            </div>
-
-            <!-- IEEE Speaker Build Project -->
-            <div class="portfolio-card" onclick="showDescription('ieee-speaker')">
-                <img src="assets/img/ieee-speaker.jpeg" alt="IEEE Speaker Build Project">
-                <h3>IEEE Speaker Build Project</h3>
-                <p>May 2024</p>
-            </div>
-            <div id="ieee-speaker" class="description">
-                <p>Collaborated with a team of three IEEE members to design and construct a portable speaker from scratch, focusing on both electrical and mechanical aspects.</p>
-                <p>Designed the circuit schematic and PCB layout using CAD, selecting components such as amplifiers, resistors, capacitors, and inductors.</p>
-                <p>Assembled and soldered electronic components, ensuring proper connections and functionality.</p>
-                <p>Gained hands-on experience in acoustics and circuit design, deepening practical electrical engineering skills through real-world application.</p>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-2xl font-bold">The Price is An Oversight</h3>
+                <p class="text-sm text-gray-600">October 2024 | React, TypeScript, Node.js, eBay API</p>
+                <p class="mt-2">Built a web application that challenges users to guess real-time prices of eBay items, enhancing engagement through interactive design. Integrated cookies to save user preferences, scores, and progress, fostering personalized experiences. Enriched gameplay with OpenAI's ChatGPT API for dynamic, contextual hints.</p>
             </div>
         </div>
     </section>
 
-    <!-- Activities & Accomplishments Section -->
-    <section id="activities" class="content-section bg-light text-center">
-        <div class="container px-4 px-lg-5">
-            <h2>Activities &amp; Accomplishments</h2>
-            <ul class="activities-list">
+    <section id="activities" class="section">
+        <h2 class="text-4xl mb-4">Activities & Accomplishments</h2>
+        <div class="max-w-2xl">
+            <ul class="list-disc list-inside space-y-2">
                 <li>Theta Tau Professional Engineering Fraternity - Academic Chair (2024 - Present)</li>
                 <li>Society of Hispanic Professional Engineers (2021 - Present)</li>
                 <li>IEEE UCF Chapter Member (2021 - Present)</li>
                 <li>UCF Knights of the Turntables Student DJ (2023 - Present)</li>
                 <li>Society of Women Engineers - Engineering Chair (2021 - Present)</li>
                 <li>Google Student Developer Club (2022 - Present)</li>
-                <li>University of Central Florida Dean’s List (2021 - 2023)</li>
+                <li>University of Central Florida Dean's List (2021 - 2023)</li>
                 <li>Phi Eta Sigma National Honor Society - 4.0 Freshman GPA (2021 - 2022)</li>
-                <li>Wiesbaden High School Women’s Golf - Most Valuable Player (2020 - 2021)</li>
+                <li>Wiesbaden High School Women's Golf - Most Valuable Player (2020 - 2021)</li>
                 <li>Vice President of Senior Class - Wiesbaden High School (2019 - 2020)</li>
             </ul>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content-section text-center">
-        <div class="container px-4 px-lg-5">
-            <h2>Contact Me!</h2>
-            <p class="lead mb-5">You can reach me at:</p>
-            <p class="lead mb-5">Phone: <a href="tel:+18635213869">863-521-3869</a></p>
-            <p class="lead mb-5">Email: <a href="mailto:amymariag217@gmail.com">amymariag217@gmail.com</a></p>
-            <p class="lead mb-5">
+    <section id="contact" class="section">
+        <h2 class="text-4xl mb-4">Contact me!</h2>
+        <div class="max-w-xl text-center">
+            <p class="mb-4">You can reach me at:</p>
+            <p class="mb-2">Phone: <a href="tel:+18635213869" class="text-blue-600 hover:underline">863-521-3869</a></p>
+            <p class="mb-2">Email: <a href="mailto:amymariag217@gmail.com" class="text-blue-600 hover:underline">amymariag217@gmail.com</a></p>
+            <p class="mb-2">
                 LinkedIn: 
-                <a href="https://www.linkedin.com/in/amymariegonzalez" target="_blank">
+                <a href="https://www.linkedin.com/in/amymariegonzalez" target="_blank" class="text-blue-600 hover:underline">
                     linkedin.com/in/amymariegonzalez
+                </a>
+            </p>
+            <p class="mb-2">
+                GitHub: 
+                <a href="https://github.com/amymariag" target="_blank" class="text-blue-600 hover:underline">
+                    github.com/amymariag
                 </a>
             </p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container px-4 px-lg-5">
-            <p class="text-muted small mb-0">
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <div class="container">
+            <p class="text-sm">
                 &copy; 2024 Amy Marie Gonzalez
             </p>
         </div>
     </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
+
